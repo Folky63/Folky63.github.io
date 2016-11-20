@@ -2,7 +2,7 @@ body {
     text-transform: uppercase;
     background: url(/img/main-bg.jpg) no-repeat top;
     color: white;
-    font-family: "PT Sans Narrow";
+    font-family: "PT Sans Narrow", sans-serif;
     width: 100%;
     margin: 0;
 }
@@ -33,7 +33,7 @@ header {
 nav li {
     display: inline-block;
     vertical-align: middle;
-    padding-bottom: 26px;
+    padding-bottom: 27px;
 }
 
 nav li:not(:first-child) {
@@ -85,14 +85,12 @@ nav {
 }
 
 .features {
-    margin-top: 82px;
+    margin-top: 36px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
 }
 
-.features-item,
-.news-gallery {
+.features-item {
     width: 279px;
     height: 176px;
     display: inline-block;
@@ -100,17 +98,39 @@ nav {
     font-size: 14px;
     font-weight: bold;
     line-height: 24px;
-    margin: 0;
+    text-align: center;
 }
 
-.features-item:not(first-child) {
-    margin-left: 20px;
+.features-item {
+    margin-left: 30px;
+    margin-bottom: 75px;
 }
 
 b,
 h2 {
     font-size: 30px;
     font-weight: bold;
+}
+
+.title {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 80px;
+    width: 90px;
+}
+
+.title::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background: white;
+    bottom: 0;
+    left: 35px;
+    position: absolute;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .news-gallery {
@@ -120,33 +140,40 @@ h2 {
     height: 430px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.news-gallery li {
-    margin-left: auto;
-    margin-right: auto;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
 }
 
 .news,
 .gallery {
     display: inline-block;
-    height: auto;
+    height: 364px;
     border: 1px dotted rgba(255, 0, 255, 0.5);
+}
+
+time {
+    font-size: 14px;
+    font-weight: normal;
 }
 
 .news {
     width: 380px;
     text-align: left;
-    vertical-align: top;
     margin-left: 70px;
 }
 
 .news ul {
     list-style-type: none;
+    margin-left: -40px;
 }
 
 .gallery {
-    width: 300px;
+    width: 320px;
+    vertical-align: top;
+    margin-left: 20px;
 }
 
 .btn {
@@ -161,9 +188,18 @@ h2 {
 }
 
 .gallery-content {
+    display: inline-block;
     background: white;
     width: 300px;
     height: 178px;
+    margin-left: 0;
+    margin-bottom: 30px;
+}
+
+.gallery-content img {
+    text-align: center;
+    margin-left: 7px;
+    margin-top: 7px;
 }
 
 {
