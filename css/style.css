@@ -1,10 +1,14 @@
 body {
-    text-transform: uppercase;
     background: url(/img/main-bg.jpg) no-repeat top;
     color: white;
-    font-family: "PT Sans Narrow", sans-serif;
     width: 100%;
     margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-family: "PT Sans Narrow", sans-serif;
 }
 
 .clearfix::after {
@@ -85,6 +89,7 @@ nav {
 }
 
 .features {
+    width: 960px;
     margin-top: 36px;
     margin-left: auto;
     margin-right: auto;
@@ -93,8 +98,7 @@ nav {
 .features-item {
     width: 279px;
     height: 176px;
-    display: inline-block;
-    vertical-align: middle;
+    float: left;
     font-size: 14px;
     font-weight: bold;
     line-height: 24px;
@@ -102,7 +106,7 @@ nav {
 }
 
 .features-item {
-    margin-left: 30px;
+    margin-left: 24px;
     margin-bottom: 75px;
 }
 
@@ -133,6 +137,23 @@ h2 {
     text-align: center;
 }
 
+time {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.btn {
+    display: inline-block;
+    width: 140px;
+    height: 43px;
+    background: black;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+}
+
 .news-gallery {
     background: url(/img/section-bg.jpg) repeat;
     color: black;
@@ -151,12 +172,6 @@ h2 {
 .gallery {
     display: inline-block;
     height: 364px;
-    border: 1px dotted rgba(255, 0, 255, 0.5);
-}
-
-time {
-    font-size: 14px;
-    font-weight: normal;
 }
 
 .news {
@@ -170,21 +185,25 @@ time {
     margin-left: -40px;
 }
 
+.news a {
+    display: inline-block;
+    min-width: 140px;
+    height: 41px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.decor-divider {
+    width: 8px;
+    height: 278px;
+    margin-left: 40px;
+}
+
 .gallery {
     width: 320px;
     vertical-align: top;
-    margin-left: 20px;
-}
-
-.btn {
-    display: inline-block;
-    width: 140px;
-    height: 43px;
-    background: black;
-    color: white;
-    font-size: 14px font-weight: bold;
-    text-align: center;
-    vertical-align: middle;
+    margin-left: 50px;
 }
 
 .gallery-content {
@@ -202,6 +221,12 @@ time {
     margin-top: 7px;
 }
 
-{
-    border: 1px dotted rgba(255, 255, 255, 0.1);
+footer {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    font-weight: bold;
+    background: black;
+    margin: 0;
+    display: inline-block;
 }
