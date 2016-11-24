@@ -1,8 +1,7 @@
 * {
-    box-sizing: border-box;
     text-transform: uppercase;
     font-family: "PT Sans Narrow", sans-serif;
-    /*        border: 1px dotted grey;*/
+    /*            border: 1px dotted grey;*/
 }
 
 body {
@@ -94,7 +93,7 @@ nav {
 }
 
 .features-item {
-    width: 279px;
+    width: 280px;
     height: 176px;
     float: left;
     font-size: 14px;
@@ -104,7 +103,7 @@ nav {
 }
 
 .features-item {
-    margin-left: 24px;
+    margin-left: 25px;
     margin-bottom: 75px;
 }
 
@@ -141,9 +140,6 @@ time {
 }
 
 .btn {
-    display: inline-block;
-    width: 138px;
-    height: 43px;
     background: black;
     color: white;
     font-size: 14px;
@@ -158,11 +154,12 @@ time {
     color: black;
     width: 940px;
     height: 430px;
-    display: inline-block;
     vertical-align: middle;
     font-size: 14px;
     font-weight: bold;
     line-height: 24px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .news-gallery {
@@ -180,6 +177,10 @@ time {
 .news {
     width: 300px;
     margin-right: 80px;
+}
+
+.news p {
+    margin-bottom: 0
 }
 
 .main-contacts {
@@ -212,7 +213,14 @@ time {
     margin-top: 34px;
 }
 
-.gallery .gallery-next {
+.btn-gallery-next,
+.btn-gallery-prev {
+    display: inline-block;
+    width: 138px;
+    height: 43px;
+}
+
+.gallery .btn-gallery-next {
     margin-left: 20px;
 }
 
@@ -231,12 +239,17 @@ section a {
     font-weight: bold;
 }
 
-.news a {
-    margin-top: 30px;
+.btn-news {
+    height: 33px;
+    margin-top: 27px;
+    padding-bottom: 0;
 }
 
-.main-contacts a {
-    margin-top: 50px;
+.contacts-btn {
+    height: 33px;
+    margin-top: 27px;
+    padding-bottom: 0;
+    margin-top: 37px;
 }
 
 .decor-divider {
@@ -271,12 +284,12 @@ section a {
 }
 
 .apply-form input:first-child {
-    margin-top: 25px;
+    margin-top: 10px;
     margin-left: 0;
 }
 
 .apply-form input:nth-child(2) {
-    margin-top: 25px;
+    margin-top: 10px;
     margin-left: 20px;
 }
 
@@ -288,11 +301,11 @@ section a {
 .apply-form input:nth-child(4) {
     margin-top: 19px;
     margin-left: 20px;
-    margin-bottom: 34px;
+    margin-bottom: 30px;
 }
 
 .apply-button {
-    width: 300px;
+    width: 299px;
     height: 43px;
 }
 
@@ -339,27 +352,68 @@ footer {
 .social,
 .copyright {
     display: inline-block;
-    background: red;
     vertical-align: top;
+    padding-top: 55px;
 }
 
-.vk,
-.fb,
-.inst {
-    display: inline-block;
-    background: url(/img/spritesheet.png) no-repeat;
+.footer-info {
+    width: 320px;
+    font-size: 14px;
+}
+
+.social {
+    width: 141px;
+    margin-left: 80px;
+    text-align: center;
+    padding-top: 32px;
+}
+
+.copyright {
+    width: 140px;
+    margin-left: 254px;
+    text-align: center;
+    padding-top: 32px;
+}
+
+.social-btn-vk,
+.social-btn-fb,
+.social-btn-inst {
+    display: block;
+    float: left;
+    background: url(/img/spritesheet.png);
     width: 43px;
     height: 43px;
+    margin-left: 6px;
 }
 
-.vk {
+.social-btn-vk {
+    width: 43px;
+    height: 43px;
     background-position: -6px -59px;
+    margin-left: 0;
 }
 
-.fb {
+.social-btn-fb {
+    width: 43px;
+    height: 43px;
     background-position: -6px -6px;
 }
 
-.inst {
+.social-btn-inst {
+    width: 43px;
+    height: 43px;
     background-position: -59px -6px;
+}
+
+.footer-wrapper {
+    width: 942px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-copyright {
+    display: block;
+    width: 138px;
+    height: 43px;
+    line-height: 45px;
 }
