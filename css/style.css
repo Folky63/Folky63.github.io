@@ -38,7 +38,7 @@ nav li {
     line-height: 20px;
 }
 
-nav a, ul span, .user-area {
+nav a, ul span {
     display: block;
     padding: 25px 20px;
     color: white;
@@ -47,23 +47,23 @@ nav a, ul span, .user-area {
 }
 
 nav a:hover {
-    background-color: #663d15;
+    background-color: #242424;
    
 }
 
 nav .active {
     position: relative;
-    background: none;
+    background-color: none;
     
 }
 nav .active::after {
     
     content: "";
     position: absolute;
-    left: 0;
+  width: 100%;
     bottom: 0px;
     height: 5px;
-    width: 100%;
+    
     background: #ffffff;
 }
 
@@ -83,21 +83,44 @@ nav {
 }
 
 .user-area {
-    position: relative;
     float: right;
+    max-width 140px;
+    
+    
+    
 }
-.user-area a {
+.login {
+    position: relative;
+    display: inline-block;
+    padding: 25px 20px;
+    padding-left: 50px;
+    line-height: 20px;
+    vertical-align: top;
     text-decoration: none;
     color: white;
+    
+    
+}
+.login::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 28px;
+    left: 20px;
+    background: transparent url('../img/icon-login.png') no-repeat;
+    opacity: 0.3;
+   
+    
+}
+.login:hover{
+    background: #242424;
+}
+.login:hover::before{
+    opacity: 1;
 }
 
-.user-area img {
-    width: 18px;
-    height: 16px;
-    position: absolute;
-    top: 28px;
-    left: 0;
-}
+
 
 .logo {
     width: 368px;
