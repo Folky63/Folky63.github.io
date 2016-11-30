@@ -34,11 +34,22 @@ header {
 
 nav li {
     display: inline-block;
-    vertical-align: middle;
-    padding-bottom: 30px;
-     margin-left: 40px;
+    vertical-align: top;
+    line-height: 20px;
 }
 
+nav a, ul span, .user-area {
+    display: block;
+    padding: 25px 20px;
+    color: white;
+    text-decoration: none;
+    
+}
+
+nav a:hover {
+    background-color: #663d15;
+   
+}
 
 nav .active {
     position: relative;
@@ -58,35 +69,34 @@ nav .active::after {
 
 
 
+
 nav ul {
     width: 680px;
     margin: 0;
     padding: 0;
-    vertical-align: middle;
+    
 }
 
-a {
-    color: white;
-    text-decoration: none;
-    vertical-align: middle;
-}
 
 nav {
     float: left;
-    padding-top: 18px;
 }
 
 .user-area {
+    position: relative;
     float: right;
-    vertical-align: middle;
-    padding-top: 18px;
+}
+.user-area a {
+    text-decoration: none;
+    color: white;
 }
 
 .user-area img {
     width: 18px;
     height: 16px;
-    margin-bottom: -6px;
-    margin-right: 10px;
+    position: absolute;
+    top: 28px;
+    left: 0;
 }
 
 .logo {
