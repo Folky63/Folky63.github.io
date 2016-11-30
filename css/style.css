@@ -38,45 +38,38 @@ nav li {
     line-height: 20px;
 }
 
-nav a, ul span {
+nav a,
+ul span {
     display: block;
     padding: 25px 20px;
     color: white;
     text-decoration: none;
-    
 }
 
 nav a:hover {
     background-color: #242424;
-   
 }
 
 nav .active {
     position: relative;
     background-color: none;
-    
 }
+
 nav .active::after {
-    
     content: "";
     position: absolute;
-  width: 100%;
+    right: 20px;
+    left: 20px;
     bottom: 0px;
     height: 5px;
-    
     background: #ffffff;
 }
-
-
-
 
 nav ul {
     width: 680px;
     margin: 0;
     padding: 0;
-    
 }
-
 
 nav {
     float: left;
@@ -85,10 +78,8 @@ nav {
 .user-area {
     float: right;
     max-width 140px;
-    
-    
-    
 }
+
 .login {
     position: relative;
     display: inline-block;
@@ -98,9 +89,8 @@ nav {
     vertical-align: top;
     text-decoration: none;
     color: white;
-    
-    
 }
+
 .login::before {
     content: "";
     position: absolute;
@@ -110,17 +100,15 @@ nav {
     left: 20px;
     background: transparent url('../img/icon-login.png') no-repeat;
     opacity: 0.3;
-   
-    
 }
-.login:hover{
+
+.login:hover {
     background: #242424;
 }
-.login:hover::before{
+
+.login:hover::before {
     opacity: 1;
 }
-
-
 
 .logo {
     width: 368px;
