@@ -5,7 +5,7 @@
 }
 
 body {
-    background: black url(/img/main-bg.jpg) no-repeat top;
+    background: black url('../img/main-bg.jpg') no-repeat top;
     color: white;
     width: 100%;
     margin: 0;
@@ -183,7 +183,7 @@ time {
 
 .news-gallery,
 .info-apply {
-    background: lightgrey url(/img/section-bg.jpg) repeat;
+    background: lightgrey url(../img/section-bg.jpg) repeat;
     color: black;
     width: 940px;
     height: 430px;
@@ -374,7 +374,7 @@ footer {
     height: 189px;
     font-size: 14px;
     font-weight: bold;
-    background: grey url(/img/footer-bg.jpg);
+    background: grey url(../img/footer-bg.jpg);
     margin: 0;
 }
 
@@ -407,7 +407,7 @@ footer {
 .social-btn {
     display: block;
     float: left;
-    background: grey url(/img/spritesheet.png);
+    background: grey url(../img/spritesheet.png);
     width: 43px;
     height: 43px;
     margin-left: 6px;
