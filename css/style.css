@@ -5,11 +5,11 @@
 }
 a {
     text-decoration: none;
-    color:white;
+    
 }
 
 body {
-    background: black url('../img/main-bg.jpg') no-repeat top;
+    background: black url("../img/main-bg.jpg") no-repeat top;
     color: white;
     width: 100%;
     margin: 0;
@@ -44,7 +44,7 @@ nav li {
 
 nav a,
 ul span {
-    display: block;
+    display: inline-block;
     padding: 25px 20px;
     color: white;
     text-decoration: none;
@@ -102,7 +102,8 @@ nav {
     height: 18px;
     top: 28px;
     left: 20px;
-    background: transparent url('../img/icon-login.png') no-repeat;
+    background: transparent url("../img/spritesheet2.png") no-repeat;
+    background-position: -9px -10px;
     opacity: 0.3;
 }
 
@@ -178,16 +179,24 @@ time {
 
 .btn {
     display: inline-block;
-    background: black;
-    color: white;
+    
+    text-align: center;
+    font-size: 14px;
     font-size: 14px;
     font-weight: bold;
-    outline: none;
+    color: white;
+    
+    background: black;
     border: none;
+    outline: none;
+    
+    
     cursor: pointer;
-    font-size: 14px;
-    height: 33px;
     padding-bottom: 0;
+    min-width: 138px;
+    min-height: 43px;
+    
+    
 }
 
 .btn:hover,
@@ -208,7 +217,7 @@ time {
 
 .news-gallery,
 .info-apply {
-    background: lightgrey url(../img/section-bg.jpg) repeat;
+    background: lightgrey url("../img/section-bg.jpg") repeat;
     color: black;
     width: 940px;
     height: 430px;
@@ -266,12 +275,7 @@ time {
     margin-top: 34px;
 }
 
-.btn-gallery-next,
-.btn-gallery-prev {
-    display: inline-block;
-    width: 138px;
-    height: 43px;
-}
+
 
 .gallery .btn-gallery-next {
     margin-left: 20px;
@@ -283,17 +287,17 @@ time {
     width: 300px;
 }
 
-section a {
-    display: inline-block;
-    min-width: 140px;
-    height: 41px;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
+section a,
+.module-btn {
+    box-sizing: border-box;
+    padding-top: 13px;
+    
+
 }
 
 .btn-news {
     margin-top: 27px;
+    height: 20px;
 }
 
 .contacts-btn {
@@ -399,7 +403,7 @@ footer {
     height: 189px;
     font-size: 14px;
     font-weight: bold;
-    background: grey url(../img/footer-bg.jpg);
+    background: grey url("../img/footer-bg.jpg");
     margin: 0;
 }
 
@@ -413,6 +417,11 @@ footer {
 
 .footer-info {
     width: 320px;
+}
+
+.footer-info a {
+    color: white;
+    text-decoration: none;
 }
 
 .social {
@@ -432,7 +441,7 @@ footer {
 .social-btn {
     display: block;
     float: left;
-    background: grey url(../img/spritesheet.png);
+    background: grey url("../img/spritesheet.png");
     width: 43px;
     height: 43px;
     margin-left: 6px;
@@ -485,3 +494,129 @@ footer {
 .map-link {
     text-decoration: underline;
 }
+
+/* login popup */
+
+.modal-content {
+    display: none;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    width: 300px;
+    margin-left: -230px;
+    padding: 50px 80px;
+    color: black;
+    background: #f8f3f0 url("../img/section-bg.jpg")
+}
+
+.modal-content-close {
+    position: absolute;
+    top: 0;
+    right: -34px;
+    width: 22px;
+    height: 22px;
+    font-size: 0;
+    border: none;
+    outline: none;
+    cursor: pointer; 
+    background: none;
+}
+
+.modal-content-close::before,
+.modal-content-close::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    width: 19px;
+    height: 3px;
+    background-color: #d0d0d0;
+    border-radius: 1px;
+    
+}
+
+.modal-content-close::before {
+    transform: rotate(45deg);
+}
+
+
+.modal-content-close::after {
+     transform: rotate(-45deg);
+}
+
+.modal-content h2 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.modal-content p {
+    margin: 0;
+    margin-bottom: 10px;
+    
+}
+
+.modal-content .login-form {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 236px;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    padding-right: 40px;
+    
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    text-transform: uppercase;
+    color: black;
+    
+    background-color: #f9f6f3;
+    border: 2px solid black;
+    outline: none;
+}
+
+.login-form input:focus {
+    border-color: #663d15;
+}
+
+.login-form input.icon-user {
+    background-image: url("../img/spritesheet2.png");
+    background-repeat: no-repeat;
+    background-position: 100% -69px;  
+    
+}
+
+
+
+.login-form input.icon-password {
+    background-image: url("../img/spritesheet2.png");
+    background-repeat: no-repeat;
+    background-position: 100% -33px;  
+}
+
+.login-form a, .login-form label {
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    text-transform: uppercase;
+}
+
+.login-form a {
+    float:right;
+    text-decoration: underline;
+}
+
+/* for JS */
+
+.popup-show {
+    display: block;
+}
+

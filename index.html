@@ -4,10 +4,10 @@
 <head>
     <meta lang="ru" charset="utf-8">
     <title>Untitled Document</title>
-    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
-     </head>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet"> 
+    </head>
 
 <body>
     <header class="clearfix">
@@ -31,8 +31,8 @@
             <section class="features clearfix">
                 <div class="features-item"> <b class="title">быстро</b>
                     <!--decorative element here-->
-                    <p>МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДЕТЕЛЬ СТИЛЬНОЙ
-                     СТРИЖКИ-МИНУТКИ! </p>
+                    <p>МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДЕТЕЛЬ СТИЛЬНОЙ 
+                    СТРИЖКИ-МИНУТКИ! </p>
                 </div>
                 <div class="features-item"> <b class="title">круто</b>
                     <!--decorative element here-->
@@ -41,8 +41,8 @@
                 </div>
                 <div class="features-item"> <b class="title">дорого</b>
                     <!--decorative element here-->
-                    <p>НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ
-                     ОПРЕДЕЛЕНЫЙ СТАТУС? </p>
+                    <p>НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ 
+                    ОПРЕДЕЛЕНЫЙ СТАТУС? </p>
                 </div>
             </section>
             <section class="news-gallery">
@@ -51,13 +51,13 @@
                         <h2 class="news-title">новости</h2>
                         <ul class="news-preview">
                             <li>
-                                <p>нам наконец завезли ягермайстер! теперь вы можете пропустить стаканчик во время
-                                 стрижки </p>
+                                <p>нам наконец завезли ягермайстер! теперь вы можете пропустить стаканчик во время 
+                                стрижки </p>
                                 <time datetime="2016-09-25">25 сентября</time>
                             </li>
                             <li>
-                                <p>в нашей команде пополнение, борис «бритва» стригунец, обладатель множества титулов и
-                                 наград пополнил наши стройные ряды.</p>
+                                <p>в нашей команде пополнение, борис «бритва» стригунец, обладатель множества титулов и 
+                                наград пополнил наши стройные ряды.</p>
                                 <time datetime="2016-09-19">19 сентября</time>
                             </li>
                         </ul> <a class="btn btn-news" href="#">все новости</a> </div> <img class="decor-divider" 
@@ -79,9 +79,8 @@
                             <br> телефон: +7(495)666-02-66</p>
                         <p>время работы:
                             <br> пн - пт: с 10:00 до 22:00
-                            <br> сб - вс: с 10:00 до 19:00</p> <a class="btn contacts-btn" href="#">как проехать</a>
-                             <a class="btn contacts-btn" href="#">обратная связь</a> </div> <img class="decor-divider" 
-                             src="img/Layer-17.png" alt="">
+                            <br> сб - вс: с 10:00 до 19:00</p> <a class="btn contacts-btn" href="#">как проехать</a> 
+                            <a class="btn contacts-btn" href="#">обратная связь</a> </div> <img class="decor-divider" src="img/Layer-17.png" alt="">
                     <div class="apply">
                         <h2>записаться</h2>
                         <p>укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
@@ -117,6 +116,47 @@ Instagram
             </div>
         </div>
     </footer>
+    <div class="modal-content">
+        <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+        <h2 class="modal-content-title">Личный кабинет</h2>
+        <p>Введите свой логин и паоль.</p>
+        <form class="login-form" action="#" method="post">
+            <input class="icon-user" type="text" name="login" placeholder="Логин">
+            <input class="icon-password" type="password" name="password" placeholder="Пароль">
+            <label class="login-checkbox">
+                <input type="checkbox" name="remember"> <span class="checkbox-indicator"></span> Запомните меня </label>
+                 <a class="restore" href="#">Я забыл пароль!</a>
+            <butten class="btn module-btn" type="submit">Войти</butten>
+        </form>
+    </div>
+    <script>
+        var login_popup = document.querySelector('.login');
+        var popup = document.querySelector('.modal-content');
+        var login_popup_close = document.querySelector('.modal-content-close');
+        
+        
+        
+        
+        login_popup.addEventListener('click', function (open_popup) {
+            open_popup.preventDefault();
+            popup.classList.toggle('popup-show');
+        });
+        login_popup_close.addEventListener('click', function (close_popup) {
+            close_popup.preventDefault();
+            popup.classList.remove('popup-show');
+        });
+        
+         var testlogin = document.querySelector('.icon-user');
+        testlogin.addEventListener('focus', function (close_popup2){
+            close_popup2.preventDefault();
+            console.log('var testlogin worked')
+            popup.classList.remove('popup-show')});
+        
+      
+        
+        
+        
+    </script>
 </body>
 
 </html>
