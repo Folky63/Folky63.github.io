@@ -1,9 +1,7 @@
 * {
     text-transform: uppercase;
     font-family: "PT Sans Narrow", sans-serif;
-    
 }
-
 
 body {
     background: black url("../img/main-bg.jpg") no-repeat top;
@@ -176,7 +174,7 @@ time {
 
 .btn {
     display: inline-block;
-   box-sizing: border-box;
+    box-sizing: border-box;
     text-align: center;
     font-size: 14px;
     font-size: 14px;
@@ -271,8 +269,6 @@ time {
     margin-top: 34px;
 }
 
-
-
 .gallery .btn-gallery-next {
     margin-left: 20px;
 }
@@ -286,9 +282,6 @@ time {
 section a,
 .module-btn {
     box-sizing: border-box;
-    
-    
-
 }
 
 .btn-news {
@@ -480,11 +473,10 @@ footer {
     margin-right: auto;
 }
 
-
-
 .map-link {
     text-decoration: underline;
 }
+
 
 /* login popup */
 
@@ -509,12 +501,14 @@ footer {
     font-size: 0;
     border: none;
     outline: none;
-    cursor: pointer; 
+    cursor: pointer;
     background: none;
 }
 
 .modal-content-close::before,
-.modal-content-close::after {
+.modal-content-close::after,
+.modal-map-close::before,
+.modal-map-close::after {
     content: "";
     position: absolute;
     top: 10px;
@@ -523,16 +517,16 @@ footer {
     height: 3px;
     background-color: #d0d0d0;
     border-radius: 1px;
-    
 }
 
-.modal-content-close::before {
+.modal-content-close::before,
+.modal-map-close::before {
     transform: rotate(45deg);
 }
 
-
-.modal-content-close::after {
-     transform: rotate(-45deg);
+.modal-content-close::after,
+.modal-map-close::after {
+    transform: rotate(-45deg);
 }
 
 .modal-content h2 {
@@ -545,7 +539,6 @@ footer {
 .modal-content p {
     margin: 0;
     margin-bottom: 10px;
-    
 }
 
 .modal-content .login-form {
@@ -560,13 +553,11 @@ footer {
     margin-bottom: 10px;
     padding: 10px 20px;
     padding-right: 40px;
-    
     font-size: 14px;
     line-height: 24px;
     font-family: "PT Sans Narrow", "Arial", sans-serif;
     text-transform: uppercase;
     color: black;
-    
     background-color: #f9f6f3;
     border: 2px solid black;
     outline: none;
@@ -579,19 +570,17 @@ footer {
 .login-form input.icon-user {
     background-image: url("../img/spritesheet2.png");
     background-repeat: no-repeat;
-    background-position: 100% -69px;  
-    
+    background-position: 100% -69px;
 }
-
-
 
 .login-form input.icon-password {
     background-image: url("../img/spritesheet2.png");
     background-repeat: no-repeat;
-    background-position: 100% -33px;  
+    background-position: 100% -33px;
 }
 
-.login-form a, .login-form label {
+.login-form a,
+.login-form label {
     color: black;
     font-weight: bold;
     font-size: 14px;
@@ -601,13 +590,88 @@ footer {
 }
 
 .login-form a {
-    float:right;
+    float: right;
     text-decoration: underline;
 }
 
-/* for JS */
 
-.popup-show {
-    display: block;
+/* modal map */
+
+.modal-map {
+    display: none;
+    position: fixed;
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    margin-top: -287px;
+    margin-left: -390px;
+    padding: 7px;
+    width: 780px;
+    height: 574px;
+    background: white;
+    box-shadow: 0px 30px 100px black;
 }
 
+.modal-map-close {
+    position: absolute;
+    top: 0;
+    right: -34px;
+    width: 22px;
+    height: 22px;
+    font-size: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+}
+
+
+/* for JS */
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+    70% {
+        transform: translateY(30px);
+    }
+    90% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+.modal-content-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
+.modal-error {
+    animation: shake 0.6s;
+}
+
+.modal-map-show {
+    display: block;
+}

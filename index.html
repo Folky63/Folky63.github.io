@@ -109,6 +109,7 @@ Instagram
             </div>
         </div>
     </footer>
+    <!-- login popup -->
     <div class="modal-content">
         <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
         <h2 class="modal-content-title">Личный кабинет</h2>
@@ -118,23 +119,71 @@ Instagram
             <input class="icon-password" type="password" name="password" placeholder="Пароль">
             <label class="login-checkbox">
                 <input type="checkbox" name="remember"> <span class="checkbox-indicator"></span> Запомните меня </label> <a class="restore" href="#">Я забыл пароль!</a>
-            <butten class="btn module-btn" type="submit">Войти</butten>
+            <button class="btn module-btn" type="submit">Войти</butten>
         </form>
     </div>
+    
+    <div class="modal-map">
+       <button class="modal-map-close" type="button" title="Закрыть">Закрыть</button>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d297.0915536729516!2d30.322979140536315!3d59.93901526562576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fc9f81cb3%3A0xb813441ee345d51!2sMediko-psihologicheskiye+konsultaciooniy+centr!5e0!3m2!1sen!2sby!4v1481288953771" width="766" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+        
+    
     <script>
         var login_popup = document.querySelector('.login');
         var popup = document.querySelector('.modal-content');
-        var login_popup_close = document.querySelector('.modal-content-close');
-        login_popup.addEventListener('click', function (open_popup) {
-            open_popup.preventDefault();
-            popup.classList.toggle('popup-show');
-        });
-        login_popup_close.addEventListener('click', function (close_popup) {
-            close_popup.preventDefault();
-            popup.classList.remove('popup-show');
-        });
+        var login_popup_close = popup.querySelector('.modal-content-close');
+        var form = popup.querySelector('form');
+        var login = popup.querySelector('[name=login]');
+        var password = popup.querySelector('[name=password]');
+        var storage = localStorage.getItem('login');
+        var map_link = document.querySelector('.map-link');
+        var map_close = document.querySelector('.modal-map-close');
+        var popup_map = document.querySelector('.modal-map')
         
-        
+        login_popup.addEventListener('click', function (event) {
+            event.preventDefault();
+            console.log('login clicked');
+            popup.classList.toggle('modal-content-show');
+            login.focus();
+            if (storage) {
+                login.value = storage;
+                password.focus();
+            }
+        });
+        login_popup_close.addEventListener('click', function (event) {
+            event.preventDefault();
+            popup.classList.remove('modal-content-show');
+            popup.classList.remove('modal-error');
+        });
+        form.addEventListener('submit', function (event) {
+            if (!login.value || !password.value) {
+                event.preventDefault();
+                console.log('no login or pass entered');
+                popup.classList.add('modal-error');
+            }
+            else {
+                localStorage.setItem('login', login.value);
+            }
+        });
+        window.addEventListener('keydown', function (event) {
+            if (event.keyCode === 27) {
+                if (popup.classList.contains('modal-content-show')) {
+                    popup.classList.remove('modal-content-show');
+                    popup.classList.remove('modal-error');
+                    popup_map.classList.remove('modal-map-show');
+                }
+            }
+        });
+        map_link.addEventListener('click', function (event) {
+            event.preventDefault();
+            console.log('map clicked');
+            popup_map.classList.toggle('modal-map-show');
+        });
+        map_close.addEventListener('click', function (event) {
+            event.preventDefault();
+            popup_map.classList.remove('modal-map-show');
+        });
         /*
         var me = thislife.querySelector('#folky');
         var rainbow = thislife.querySelector('#rainbow');
@@ -145,7 +194,6 @@ Instagram
         });
         
         */
-        
     </script>
 </body>
 
