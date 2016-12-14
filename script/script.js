@@ -42,7 +42,6 @@ submit_byn.addEventListener('click', function (ev) {
     calccurrency(eurbyn, output_byn_eur);
     calccurrency(rubbyn, output_byn_rub);
 });
-
 //submit_byn.addEventListener('click', function (ev) {
 //    ev.preventDefault();
 //    input = input_byn.value;
