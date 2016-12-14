@@ -39,6 +39,7 @@ h5 {
   padding: 0;
   text-align: bottom;
   width: 147px;
+  opacity: 0.2;
 }
 .wrapper span:first-child {
   color: #539a58;
