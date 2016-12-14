@@ -4,9 +4,15 @@ body {
   background: #191919;
   background-image: linear-gradient();
   font-family: 'Space Mono', monospace;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+hr {
+  margin: 30px 0;
 }
 .wrapper-left {
   display: inline-block;
+  margin-top: 30px;
 }
 .wrapper {
   display: inline-block;
@@ -23,7 +29,7 @@ body {
   position: absolute;
   top: 5px;
   left: 9px;
-  line-height: 25px;
+  line-height: 23px;
 }
 h2 {
   display: inline-block;
@@ -104,4 +110,21 @@ form {
 }
 .output div {
   display: inline-block;
+}
+.input-wrapper label {
+  font-size: 14px;
+}
+.input-wrapper {
+  height: 23px;
+}
+.riddle {
+  color: #93f399;
+  background-image: radial-gradient(#2f4630, #191919 70%, #191919 80%);
+  border: 3px solid #64bc69;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  width: 150px;
+  height: 50px;
 }
