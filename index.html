@@ -2,199 +2,33 @@
 <html>
 
 <head>
-    <meta lang="ru" charset="utf-8">
+    <meta charset="UTF-8">
     <title>Untitled Document</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet"> </head>
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+    <link rel="stylesheet/less" type="text/css" href="css/style.less" />
+    <script src="script/less.min.js" type="text/javascript"></script>
+</head>
 
 <body>
-    <header class="clearfix">
-        <div class="layout-centerer">
-            <nav>
-                <ul>
-                    <li class="active"><span>главная</span></li>
-                    <li><a href="#">информация</a></li>
-                    <li><a href="#">новости</a></li>
-                    <li><a href="#">прайс-лист</a></li>
-                    <li><a href="#">магазин</a></li>
-                    <li><a href="#">контакты</a></li>
-                </ul>
-            </nav>
-            <div class="user-area"> <a class="login" href="#">вход</a> </div>
+    <div class="wrapper">
+        <h2>JS <span>s</span><span>a</span><span>n</span><span>d</span><span>b</span><span>o</span><span>x</span></h2> </div>
+    <hr>
+    <div class="input-wrapper">
+        <form action="#">
+            <label for="input_byn">Enter BYN to convert</label>
+            <input class="input" id="input_byn" type="text" name="BYN">
+            <input class="submit" id="submit_byn" type="submit" name="BYN"> </form>
+        <div class="output" id="outputusd"> <span>USD:</span>
+            <div id="output_byn_usd"></div>
         </div>
-    </header>
-    <main>
-        <div class="layout-centerer">
-            <div class="logo"> <img src="img/BORODINSKI%20Logo.png" alt="логотип"> </div>
-            <section class="features clearfix">
-                <div class="features-item"> <b class="title">быстро</b>
-                    <!--decorative element here-->
-                    <p>МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДЕТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ! </p>
-                </div>
-                <div class="features-item"> <b class="title">круто</b>
-                    <!--decorative element here-->
-                    <p>забудьте, как вы стриглись раньше.
-                        <br> мы сделаем из вас звезду футбола или кино! во всяком случае внешне.</p>
-                </div>
-                <div class="features-item"> <b class="title">дорого</b>
-                    <!--decorative element here-->
-                    <p>НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ ОПРЕДЕЛЕНЫЙ СТАТУС? </p>
-                </div>
-            </section>
-            <section class="news-gallery">
-                <div class="sections-centerer">
-                    <div class="news">
-                        <h2 class="news-title">новости</h2>
-                        <ul class="news-preview">
-                            <li>
-                                <p>нам наконец завезли ягермайстер! теперь вы можете пропустить стаканчик во время стрижки </p>
-                                <time datetime="2016-09-25">25 сентября</time>
-                            </li>
-                            <li>
-                                <p>в нашей команде пополнение, борис «бритва» стригунец, обладатель множества титулов и наград пополнил наши стройные ряды.</p>
-                                <time datetime="2016-09-19">19 сентября</time>
-                            </li>
-                        </ul> <a class="btn btn-news" href="#">все новости</a> </div> <img class="decor-divider" src="img/Layer-17.png" alt="">
-                    <div class="gallery">
-                        <h2 class="gallery-title">фотогалерея</h2>
-                        <figure class="gallery-content"> <img src="img/gallery-slider-1.jpg" alt="фото"> </figure>
-                        <button class="btn btn-gallery-prev" disabled>назад</button>
-                        <button class="btn btn-gallery-next">вперед</button>
-                    </div>
-                </div>
-            </section>
-            <section class="info-apply">
-                <div class="sections-centerer">
-                    <div class="main-contacts">
-                        <h2>контактная информация</h2>
-                        <p class="contacts"> барбершоп «бородинский»
-                            <br> адрес: г.санкт-петербург, б. конюшенная, д. 19/8
-                            <br> телефон: +7(495)666-02-66</p>
-                        <p>время работы:
-                            <br> пн - пт: с 10:00 до 22:00
-                            <br> сб - вс: с 10:00 до 19:00</p> <a class="btn contacts-btn" href="#">как проехать</a> <a class="btn contacts-btn" href="#">обратная связь</a> </div> <img class="decor-divider" src="img/Layer-17.png" alt="">
-                    <div class="apply">
-                        <h2>записаться</h2>
-                        <p>укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-                        <form class="apply-form" action="#" method="post">
-                            <input type="text" name="text" value="" placeholder="дата">
-                            <input type="text" name="time" value="" placeholder="время">
-                            <input type="text" name="name" value="" placeholder="ваше имя">
-                            <input type="tel" name="phone" value="" placeholder="телефон">
-                            <button class="btn btn-apply" type="submit">отправить</button>
-                        </form>
-                    </div>
-                </div>
-            </section>
+        <div class="output" id="outputeur"> <span>EUR:</span>
+            <div id="output_byn_eur"></div>
         </div>
-    </main>
-    <footer>
-        <div class="layout-centerer">
-            <div class="footer-wrapper">
-                <div class="footer-info"> барбершоп «бородинский»
-                    <br> адрес: г.санкт-петербург, б. конюшенная, д. 19/8
-                    <br> <a class="map-link" href="#"> как нас найти?</a>
-                    <br> телефон: +7(495)666-02-66 </div>
-                <div class="social">
-                    <p>давайте дружить!</p> <a class="social-btn social-btn-vk" href="#">
-VK
-                    </a> <a class="social-btn social-btn-fb" href="#">
-FB
-                    </a> <a class="social-btn social-btn-inst" href="#">
-Instagram
-                    </a> </div>
-                <div class="copyright">
-                    <p>разработано:</p> <a class="btn btn-copyright" href="#">HTMLACADEMY.RU</a> </div>
-            </div>
+        <div class="output" id="outputrub"> <span>RUB:</span>
+            <div id="output_byn_rub"></div>
         </div>
-    </footer>
-    <!-- login popup -->
-    <div class="modal-content">
-        <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
-        <h2 class="modal-content-title">Личный кабинет</h2>
-        <p>Введите свой логин и паоль.</p>
-        <form class="login-form" action="#" method="post">
-            <input class="icon-user" type="text" name="login" placeholder="Логин">
-            <input class="icon-password" type="password" name="password" placeholder="Пароль">
-            <label class="login-checkbox">
-                <input type="checkbox" name="remember"> <span class="checkbox-indicator"></span> Запомните меня </label> <a class="restore" href="#">Я забыл пароль!</a>
-            <button class="btn module-btn" type="submit">Войти</butten>
-        </form>
     </div>
-    
-    <div class="modal-map">
-       <button class="modal-map-close" type="button" title="Закрыть">Закрыть</button>
-       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d297.0915536729516!2d30.322979140536315!3d59.93901526562576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fc9f81cb3%3A0xb813441ee345d51!2sMediko-psihologicheskiye+konsultaciooniy+centr!5e0!3m2!1sen!2sby!4v1481288953771" width="766" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
-        
-    
-    <script>
-        var login_popup = document.querySelector('.login');
-        var popup = document.querySelector('.modal-content');
-        var login_popup_close = popup.querySelector('.modal-content-close');
-        var form = popup.querySelector('form');
-        var login = popup.querySelector('[name=login]');
-        var password = popup.querySelector('[name=password]');
-        var storage = localStorage.getItem('login');
-        var map_link = document.querySelector('.map-link');
-        var map_close = document.querySelector('.modal-map-close');
-        var popup_map = document.querySelector('.modal-map')
-        
-        login_popup.addEventListener('click', function (event) {
-            event.preventDefault();
-            console.log('login clicked');
-            popup.classList.toggle('modal-content-show');
-            login.focus();
-            if (storage) {
-                login.value = storage;
-                password.focus();
-            }
-        });
-        login_popup_close.addEventListener('click', function (event) {
-            event.preventDefault();
-            popup.classList.remove('modal-content-show');
-            popup.classList.remove('modal-error');
-        });
-        form.addEventListener('submit', function (event) {
-            if (!login.value || !password.value) {
-                event.preventDefault();
-                console.log('no login or pass entered');
-                popup.classList.add('modal-error');
-            }
-            else {
-                localStorage.setItem('login', login.value);
-            }
-        });
-        window.addEventListener('keydown', function (event) {
-            if (event.keyCode === 27) {
-                if (popup.classList.contains('modal-content-show')) {
-                    popup.classList.remove('modal-content-show');
-                    popup.classList.remove('modal-error');
-                    popup_map.classList.remove('modal-map-show');
-                }
-            }
-        });
-        map_link.addEventListener('click', function (event) {
-            event.preventDefault();
-            console.log('map clicked');
-            popup_map.classList.toggle('modal-map-show');
-        });
-        map_close.addEventListener('click', function (event) {
-            event.preventDefault();
-            popup_map.classList.remove('modal-map-show');
-        });
-        /*
-        var me = thislife.querySelector('#folky');
-        var rainbow = thislife.querySelector('#rainbow');
-        
-        rainbow.addEventListener('focus', function (make_gay) {
-            make_gay.preventDefault();
-            me.classList.add('faggot');
-        });
-        
-        */
-    </script>
+    <script src="script/script.js" type="text/javascript"></script>
 </body>
 
 </html>
