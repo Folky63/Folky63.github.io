@@ -115,8 +115,8 @@ var depvalue_number;
 var deprate_number;
 
 function takevalues() {
-    depvalue_number = parseInt(deposit_value.value);
-    deprate_number = parseInt(deposit_interest_rate.value);
+    depvalue_number = +deposit_value.value;
+    deprate_number = +deposit_interest_rate.value;
 }
 
 function depcalc(dvalue, drate) {
@@ -155,40 +155,7 @@ bigred.addEventListener('click', function (ev) {
     bigred.innerHTML = "DON'T TOUCH ME";
     bigred.classList.add('bounceOutRight');
 });
-//var doors = [];
-//doors[0] = false;
-//doors[1] = false;
-//doors[2] = false;
-//console.log(doors);
-//
-//
-//function randomAssign(arrayExample) {
-//    var picked = Math.floor(Math.random() * arrayExample.length);
-//    arrayExample[picked] = true;
-//    return picked;
-//
-//} 
-//
-//function player1
-/* */
-//submit_byn.addEventListener('click', function (ev) {
-//    ev.preventDefault();
-//    input = input_byn.value;
-//    result = input / usdbyn;
-//    result = Math.round(result * 10) / 10;
-//    output_byn_usd.classList.add('show');
-//    output_byn_usd.innerHTML = result;
-//});
-// var array = [10, 20, 30, 40];
-// document.write('line 17: array = ' + array + '<br>');
-// var summ = 0;
-// document.write('line 19: summ = ' + summ + '<br>');
-// document.write('<b>actual voodoo starts here:</b><br>')
-// for (var counter = 0; counter < array.length; counter++) {
-//     document.write('line 23: counter = ' + counter + '<br>');
-//     document.write('line 25: summ = ' + array[counter] + '+' + summ + '<br>');
-//     summ += array[counter]; //b = 0+40 ?
-//     document.write('line 25: summ = ' + summ + '<br>');
-// }
-// document.write('<b>the result of your this voodoo is ' + summ + '</b>');
-//------------------------------
+
+/* cookies */
+
+document.cookie = 'ti=loh;expires=Sun, 1 Jan 2017 23:59:59 GMT'
